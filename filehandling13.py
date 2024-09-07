@@ -20,16 +20,3 @@ def list_directory_contents(path='.'):
 
 specific_path = './' #Apporpiate format for file reading. 
 list_directory_contents(specific_path)
-  
-
-
-
-try:
-  with open('my_garden.txt', 'a') as file:
-    file.write("\nNew garden log entry")
-except PermissionError:
-  print("You don't have permission to write to this file.")
-except IOError:
-  print("An issue occured while writing the file.")
-except Exception as e:
-  print(f"A general error occured: {e}")
